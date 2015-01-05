@@ -11,6 +11,8 @@ depends=('iproute2' 'iptables')
 conflicts=("$pkgname-git")
 source=("https://codeload.github.com/$pkgname/$pkgname/tar.gz/v$pkgver")
 md5sums=('3dd9f13489efd300414e787bf85c01d6')
+backup=('etc/nodogsplash/nodogsplash.conf'
+  'etc/nodogsplash/htdocs/'{images/splash.jpg,splash.html,infoskel.html})
 
 build() {
   cd "$pkgname-$pkgver"
